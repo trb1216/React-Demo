@@ -1,0 +1,73 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _react = require("react");
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactDom = require("react-dom");
+  var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
+  var _componentsCountJs = require("./components/Count.js");
+  var _componentsCountJsDefault = _parcelHelpers.interopDefault(_componentsCountJs);
+  var _componentsClickerJs = require("./components/Clicker.js");
+  var _componentsClickerJsDefault = _parcelHelpers.interopDefault(_componentsClickerJs);
+  var _componentsFormJs = require("./components/Form.js");
+  var _componentsFormJsDefault = _parcelHelpers.interopDefault(_componentsFormJs);
+  var _jsxFileName = "/home/tim/Fullstack/React-Demo/src/index.js", _s = $RefreshSig$();
+  const App = () => {
+    _s();
+    const [count, setCount] = _react.useState(0);
+    const [name, SetName] = _react.useState("Pawan");
+    _react.useEffect(() => {
+      console.log(count);
+    }, [count]);
+    const increment = () => {
+      setCount(count + 1);
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement(_componentsClickerJsDefault.default, {
+        inc: increment,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23,
+          columnNumber: 7
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement(_componentsCountJsDefault.default, {
+        count: count,
+        name: "Ben",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24,
+          columnNumber: 7
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement(_componentsFormJsDefault.default, {
+        setCurrName: currName,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25,
+          columnNumber: 7
+        }
+      }))
+    );
+  };
+  _s(App, "/w/LXbA+/gSCCyFMglFMy2cPuM0=");
+  _c = App;
+  _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement(App, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 17
+    }
+  }), document.getElementById("root"));
+  var _c;
+  $RefreshReg$(_c, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

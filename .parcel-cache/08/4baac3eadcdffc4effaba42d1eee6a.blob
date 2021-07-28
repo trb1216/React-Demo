@@ -1,0 +1,78 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _react = require("react");
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactDom = require("react-dom");
+  var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
+  var _jsxFileName = "/home/tim/Fullstack/React-Demo/src/index.js", _s = $RefreshSig$();
+  const Clicker = () => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("button", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 5,
+          columnNumber: 10
+        }
+      }, "Click me ")
+    );
+  };
+  _c = Clicker;
+  const Count = props => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8,
+          columnNumber: 10
+        }
+      }, "The count is: ", props.count)
+    );
+  };
+  _c2 = Count;
+  const App = () => {
+    _s();
+    const [count, setCount] = _react.useState(0);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement(Clicker, {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17,
+          columnNumber: 7
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement(Count, {
+        count: count,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 7
+        }
+      }))
+    );
+  };
+  _s(App, "oDgYfYHkD9Wkv4hrAPCkI/ev3YU=");
+  _c3 = App;
+  _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement(App, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 17
+    }
+  }), document.getElementById("root"));
+  var _c, _c2, _c3;
+  $RefreshReg$(_c, "Clicker");
+  $RefreshReg$(_c2, "Count");
+  $RefreshReg$(_c3, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
